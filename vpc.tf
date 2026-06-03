@@ -49,8 +49,9 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
-resource "aws_route_table" "public_rt" {
-  vpc_id = aws_vpc.main.id
+# Налаштовуємо стандартну (Main) таблицю маршрутів, яку AWS створив сам
+resource "aws_default_route_table" "public_rt" {
+  default_route_table_id = aws_vpc.main.default_route_table_id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -58,21 +59,21 @@ resource "aws_route_table" "public_rt" {
   }
 
   tags = {
-    Name = var.routing_table
+    Name = "cmtr-o3e0v1ec-01-route-table"
   }
 }
 
 resource "aws_route_table_association" "assoc1" {
   subnet_id      = aws_subnet.subnet1.id
-  route_table_id = aws_route_table.public_rt.id
+  route_table_id = aws_default_route_table.public_rt.id
 }
 
 resource "aws_route_table_association" "assoc2" {
   subnet_id      = aws_subnet.subnet2.id
-  route_table_id = aws_route_table.public_rt.id
+  route_table_id = aws_default_route_table.public_rt.id
 }
 
 resource "aws_route_table_association" "assoc3" {
   subnet_id      = aws_subnet.subnet3.id
-  route_table_id = aws_route_table.public_rt.id
+  route_table_id = aws_default_route_table.public_rt.id
 }
