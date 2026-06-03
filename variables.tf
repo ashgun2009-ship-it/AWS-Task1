@@ -1,73 +1,69 @@
 variable "aws_region" {
   type        = string
-  description = "The AWS region where all regional resources will be created."
+  description = "Регіон для розгортання інфраструктури"
 }
 
 variable "vpc_name" {
   type        = string
-  description = "The name tag for the Virtual Private Cloud (VPC)."
+  description = "Назва нашої VPC"
 }
 
 variable "vpc_cidr" {
   type        = string
-  description = "The CIDR block configuration for the AWS VPC."
+  description = "CIDR блок для VPC"
 }
 
-# Підмережа 1
 variable "subnet1_name" {
   type        = string
-  description = "The name tag for the first public subnet."
+  description = "Назва першої підмережі"
 }
 
 variable "availability_zone1" {
   type        = string
-  description = "The AWS Availability Zone for the first public subnet."
+  description = "Зоня доступності для першої підмережі"
 }
 
 variable "subnet1_cidr" {
   type        = string
-  description = "The CIDR block for the first public subnet."
+  description = "CIDR блок для першої підмережі"
 }
 
-# Підмережа 2
 variable "subnet2_name" {
   type        = string
-  description = "The name tag for the second public subnet."
+  description = "Назва другої підмережі"
 }
 
 variable "availability_zone2" {
   type        = string
-  description = "The AWS Availability Zone for the second public subnet."
+  description = "Зоня доступності для другої підмережі"
 }
 
 variable "subnet2_cidr" {
   type        = string
-  description = "The CIDR block for the second public subnet."
+  description = "CIDR блок для другої підмережі"
 }
 
-# Підмережа 3
 variable "subnet3_name" {
   type        = string
-  description = "The name tag for the third public subnet."
+  description = "Назва третьої підмережі"
 }
 
 variable "availability_zone3" {
   type        = string
-  description = "The AWS Availability Zone for the third public subnet."
+  description = "Зоня доступності для третьої підмережі"
 }
 
 variable "subnet3_cidr" {
   type        = string
-  description = "The CIDR block for the third public subnet."
+  description = "CIDR блок для третьої підмережі"
 }
 
-# Інші ресурси
 variable "internet_gateway" {
   type        = string
-  description = "The name tag for the AWS Internet Gateway."
+  description = "Назва інтернет-шлюзу"
 }
 
 variable "routing_table" {
   type        = string
-  description = "The name tag for the public Route Table."
+  description = "Назва таблиці маршрутизації"
 }
