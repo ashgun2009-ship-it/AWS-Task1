@@ -15,4 +15,4 @@ availability_zone3 = "eu-west-1c"
 subnet3_cidr       = "10.10.5.0/24"
 
 internet_gateway = "cmtr-o3e0v1ec-01-igw"
-routing_table    = "cmtr-o3e0v1ec-01-rt-public"
+routing_table    = "cmtr-o3e0v1ec-01-rt"

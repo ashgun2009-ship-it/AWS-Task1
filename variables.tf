@@ -1,69 +1,69 @@
 variable "aws_region" {
   type        = string
-  description = "Регіон для розгортання інфраструктури"
+  description = "AWS region for infrastructure deployment"
 }
 
 variable "vpc_name" {
   type        = string
-  description = "Назва нашої VPC"
+  description = "The name tag for the VPC"
 }
 
 variable "vpc_cidr" {
   type        = string
-  description = "CIDR блок для VPC"
+  description = "The CIDR block for the VPC"
 }
 
 variable "subnet1_name" {
   type        = string
-  description = "Назва першої підмережі"
+  description = "The name tag for public subnet A"
 }
 
 variable "availability_zone1" {
   type        = string
-  description = "Зоня доступності для першої підмережі"
+  description = "The availability zone for public subnet A"
 }
 
 variable "subnet1_cidr" {
   type        = string
-  description = "CIDR блок для першої підмережі"
+  description = "The CIDR block for public subnet A"
 }
 
 variable "subnet2_name" {
   type        = string
-  description = "Назва другої підмережі"
+  description = "The name tag for public subnet B"
 }
 
 variable "availability_zone2" {
   type        = string
-  description = "Зоня доступності для другої підмережі"
+  description = "The availability zone for public subnet B"
 }
 
 variable "subnet2_cidr" {
   type        = string
-  description = "CIDR блок для другої підмережі"
+  description = "The CIDR block for public subnet B"
 }
 
 variable "subnet3_name" {
   type        = string
-  description = "Назва третьої підмережі"
+  description = "The name tag for public subnet C"
 }
 
 variable "availability_zone3" {
   type        = string
-  description = "Зоня доступності для третьої підмережі"
+  description = "The availability zone for public subnet C"
 }
 
 variable "subnet3_cidr" {
   type        = string
-  description = "CIDR блок для третьої підмережі"
+  description = "The CIDR block for public subnet C"
 }
 
 variable "internet_gateway" {
   type        = string
-  description = "Назва інтернет-шлюзу"
+  description = "The name tag for the Internet Gateway"
 }
 
 variable "routing_table" {
   type        = string
-  description = "Назва таблиці маршрутизації"
+  description = "The name tag for the public Route Table"
 }
