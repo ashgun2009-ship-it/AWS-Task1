@@ -18,6 +18,6 @@ output "internet_gateway_id" {
 }
 
 output "route_table_id" {
-  value       = aws_route_table.public_rt.id
+  value       = aws_default_route_table.public_rt.id
   description = "The ID of the public Route Table."
 }
